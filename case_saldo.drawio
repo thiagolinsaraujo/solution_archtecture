@@ -1,0 +1,62 @@
+<mxfile host="app.diagrams.net" modified="2023-09-18T00:43:05.182Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="gz6ONwJc8PlQOc1yPptb" version="21.7.5" type="github">
+  <diagram name="Page-1" id="gGYsikFLK5Vrc8IRnrli">
+    <mxGraphModel dx="2954" dy="1204" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="DeopbUbXlSMpJaITzvuM-2" value="On Premises" style="rounded=1;whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;" vertex="1" parent="1">
+          <mxGeometry x="890" y="480" width="680" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="DeopbUbXlSMpJaITzvuM-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="DeopbUbXlSMpJaITzvuM-3" target="DeopbUbXlSMpJaITzvuM-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DeopbUbXlSMpJaITzvuM-9" value="A cada nova transação do cliente,&lt;br style=&quot;border-color: var(--border-color); font-size: 12px; background-color: rgb(251, 251, 251);&quot;&gt;&lt;span style=&quot;font-size: 12px; background-color: rgb(251, 251, 251);&quot;&gt;o mainframe gera uma mensagem no MQ,&lt;/span&gt;&lt;br style=&quot;border-color: var(--border-color); font-size: 12px; background-color: rgb(251, 251, 251);&quot;&gt;&lt;span style=&quot;font-size: 12px; background-color: rgb(251, 251, 251);&quot;&gt;informando sobre o saldo atualizado&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="DeopbUbXlSMpJaITzvuM-8">
+          <mxGeometry x="-0.0443" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DeopbUbXlSMpJaITzvuM-3" value="Mainframe" style="image;html=1;image=img/lib/clip_art/computers/Server_Rack_128x128.png" vertex="1" parent="1">
+          <mxGeometry x="1440" y="790" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="DeopbUbXlSMpJaITzvuM-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="DeopbUbXlSMpJaITzvuM-6" target="DeopbUbXlSMpJaITzvuM-12">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1360" y="630" />
+              <mxPoint x="1230" y="630" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DeopbUbXlSMpJaITzvuM-6" value="" style="sketch=0;outlineConnect=0;fillColor=#0050ef;strokeColor=#001DBC;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.gear;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="690" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="DeopbUbXlSMpJaITzvuM-7" value="Fika SALDO_ATUALIZADO" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.queue;fillColor=#D9A741;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="970" y="806" width="73.5" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="DeopbUbXlSMpJaITzvuM-10" value="Rotina Mainframe que grava arquivo as 2AM com a&lt;br&gt;lista de saldos consolidados de todos os clientes do banco" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="730" width="340" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="DeopbUbXlSMpJaITzvuM-11" value="Arquivo batch de saldos (aprox. 50GB)" style="image;html=1;image=img/lib/clip_art/general/Full_Folder_128x128.png" vertex="1" parent="1">
+          <mxGeometry x="1400" y="590" width="30" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="DeopbUbXlSMpJaITzvuM-12" value="Servidor de Arquivos&lt;br&gt;(NFS)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="1170" y="540" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DeopbUbXlSMpJaITzvuM-14" value="Processo&lt;br&gt;Batch" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="620" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="DeopbUbXlSMpJaITzvuM-15" value="Direct Connect" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.direct_connect;fillColor=#F58536;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="810" y="580" width="67.5" height="81" as="geometry" />
+        </mxCell>
+        <mxCell id="DeopbUbXlSMpJaITzvuM-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.524;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="DeopbUbXlSMpJaITzvuM-16" target="DeopbUbXlSMpJaITzvuM-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DeopbUbXlSMpJaITzvuM-16" value="Conta Cloud" style="rounded=1;whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;" vertex="1" parent="1">
+          <mxGeometry x="120" y="490" width="680" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="DeopbUbXlSMpJaITzvuM-19" value="&lt;b style=&quot;font-size: 20px;&quot;&gt;Problemática&lt;/b&gt;: Precisamos criar uma API REST que será usada pelos canais do banco para consulta de saldo do cliente.&lt;br style=&quot;font-size: 20px;&quot;&gt;&lt;b style=&quot;font-size: 20px;&quot;&gt;Premissas da jornada:&lt;/b&gt;&lt;br style=&quot;font-size: 20px;&quot;&gt;- Garantir que apenas o dono do saldo consiga consultar o seu saldo.&lt;br style=&quot;font-size: 20px;&quot;&gt;- Monitorar possíveis falhas na atualização e retorno do saldo, gerando alertas para atuação imediata do time&lt;br style=&quot;font-size: 20px;&quot;&gt;- Precisamos avisar outros sistemas do banco (considere apenas sistemas na Cloud AWS) sobre o saldo atualizado.&lt;br style=&quot;font-size: 20px;&quot;&gt;- Tentar otimizar ao máximo os custos" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="120" y="260" width="1100" height="160" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
